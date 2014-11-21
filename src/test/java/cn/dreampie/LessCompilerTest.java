@@ -14,7 +14,7 @@ public class LessCompilerTest {
     File input = new File(getClass().getResource("/test.less").getPath());
     LessSource lessSource = new LessSource(input);
     LessCompiler lessCompiler = new LessCompiler();
-    lessCompiler.setCompress(false);
+    lessCompiler.setCompress(true);
 
     File output = new File(input.getAbsolutePath().replace(".less", ".css"));
     lessCompiler.compile(lessSource, output);
