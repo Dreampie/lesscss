@@ -419,10 +419,10 @@ public class LessCompiler {
             }
           }
 
-          throw new LessException(message.toString(), e);
+          throw new LessException(message.toString());
         }
       }
-      throw new LessException(e);
+      throw new LessException(e.getMessage());
     } finally {
       // reset our ouput stream so we don't copy data on the next invocation
       out.reset();
