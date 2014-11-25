@@ -16,28 +16,32 @@ package cn.dreampie;
 
 /**
  * An exception that provides information on a LESS compilation error.
- * 
+ *
  * @author Marcel Overdijk
  */
 @SuppressWarnings("serial")
-public class LessException extends Exception {
+public class LessException extends RuntimeException {
 
-    /**
-     * Constructs a new <code>LessException</code>.
-     * 
-     * @param cause The cause.
-     */
-    public LessException(Throwable cause) {
-        super(cause);
-    }
+  public LessException(String message) {
+    super(message);
+  }
 
-    /**
-     * Constructs a new <code>LessException</code>.
-     * 
-     * @param message The message.
-     * @param cause The cause.
-     */
-    public LessException(String message, Throwable cause) {
-        super(message, cause);
-    }
+  /**
+   * Constructs a new <code>LessException</code>.
+   *
+   * @param cause The cause.
+   */
+  public LessException(Throwable cause) {
+    super(cause);
+  }
+
+  /**
+   * Constructs a new <code>LessException</code>.
+   *
+   * @param message The message.
+   * @param cause   The cause.
+   */
+  public LessException(String message, Throwable cause) {
+    super(message, cause);
+  }
 }
